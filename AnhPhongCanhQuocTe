@@ -1,0 +1,38 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package DAKhoAnhPhongCanh;
+
+/**
+ *
+ * @author 84974
+ */
+
+
+public abstract class AnhPhongCanhQuocTe extends AnhPhongCanh{
+ 
+    private String TenQuocGia; 
+    public AnhPhongCanhQuocTe() {
+    }
+ 
+    public AnhPhongCanhQuocTe(String Name, String TacGia, String KichThuoc, NgayNhapXuat date, String TenQuocGia) {
+        super(Name, TacGia, KichThuoc, date);
+         this.TenQuocGia = TenQuocGia;
+      }
+ 
+     public String getTenQuocGia() {
+        return TenQuocGia;
+    }
+ 
+    public void setTenQuocGia(String TenQuocGia) {
+        this.TenQuocGia = TenQuocGia;
+    }
+ 
+    @Override
+    public String toString() {
+        return "AnhPhongCanhQuocTe{" + super.toString() + ", TenQuocGia=" + TenQuocGia + '}';
+    }
+}
+
+
