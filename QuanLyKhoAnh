@@ -1,0 +1,74 @@
+package DAKhoAnhPhongCanh;
+ 
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.Scanner;
+ 
+public class QuanLyKhoAnhPhongCanh {
+ 
+    ArrayList<AnhPhongCanh> apcn = new ArrayList<>();
+ 
+    Scanner sc = new Scanner(System.in);
+ 
+    public void them_anh(AnhPhongCanh apc) {
+        apcn.add(apc);
+    }
+ 
+    public void in_thong_tin() {
+        for (AnhPhongCanh anhPhongCanh : apcn) {
+            System.out.println(anhPhongCanh.toString());
+        }
+    }
+ 
+ 
+    public void in_AnhPhongCanhVietNam() {
+        for (AnhPhongCanh anhPhongCanh : apcn) {
+            if (anhPhongCanh instanceof AnhPhongCanhVietNam) {
+                System.out.println(anhPhongCanh.toString());
+            }
+        }
+    }
+ 
+    public void in_AnhPhongCanhQuocTe() {
+        for (AnhPhongCanh anhPhongCanh: apcn) {
+            if (anhPhongCanh instanceof AnhPhongCanhQuocTe) {
+                System.out.println(anhPhongCanh.toString());
+            }
+        }
+    }
+ 
+    public int kiem_tra_so_luong() {
+        return apcn.AnhPhongCanhQuocTe();
+    }
+ 
+    public void tim_anh_theo_ten(String name) {
+        for (AnhPhongCanh anhPhongCanh : apcn) {
+            if (anhPhongCanh.getName().indexOf(name) >= 0) {
+                System.out.println(anhPhongCanh);
+            }
+        }
+    }
+
+ 
+    public void kiem_tra_ton_tai(String code) {
+        for (AnhPhongCanh anhPhongCanh : apcn) {
+            if (apcn.contains(code)) {
+                System.out.println(anhPhongCanh);
+            }
+        }
+    }
+ 
+    public boolean xoa_mot_anh_tinh_theo_code(AnhPhongCanh apc) {
+        return apcn.remove(apc);
+    }
+ 
+    public void ngay_xuat_kho() {
+        Calendar cal = Calendar.getInstance();
+        Date date = cal.getTime();
+        System.out.print("Thoi gian xuat may tinh cua he thong: " + date);
+        System.out.println("\n");
+    }
+}
