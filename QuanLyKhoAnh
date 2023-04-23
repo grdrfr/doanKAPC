@@ -1,5 +1,5 @@
+
 package DAKhoAnhPhongCanh;
- 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
@@ -41,7 +41,7 @@ public class QuanLyKhoAnhPhongCanh {
     }
  
     public int kiem_tra_so_luong() {
-        return apcn.AnhPhongCanhQuocTe();
+        return apcn.size();
     }
  
     public void tim_anh_theo_ten(String name) {
