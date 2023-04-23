@@ -1,36 +1,27 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package DAKhoAnhPhongCanh;
 
-/**
- *
- * @author 84974
- */
- 
-public abstract class AnhPhongCanhVietNam extends AnhPhongCanh{
- 
-    private String TenTinhThanh; 
+public class AnhPhongCanhVietNam extends AnhPhongCanh {
+
+    private String TenTinhThanh;
+
     public AnhPhongCanhVietNam() {
     }
- 
+
     public AnhPhongCanhVietNam(String Name, String TacGia, String KichThuoc, NgayNhapXuat date, String TenTinhThanh) {
         super(Name, TacGia, KichThuoc, date);
         this.TenTinhThanh = TenTinhThanh;
-      }
- 
+    }
+
     public String getTenTinhThanh() {
         return TenTinhThanh;
     }
- 
+
     public void setTenTinhThanh(String TenTinhThanh) {
         this.TenTinhThanh = TenTinhThanh;
     }
-     @Override
+
+    @Override
     public String toString() {
-        return "AnhPhongCanhVietNam{" + super.toString() + ", TenTinhThanh=" + TenTinhThanh +'}';
+        return "AnhPhongCanhVietNam{" + super.toString() + ", TenTinhThanh=" + TenTinhThanh + '}';
     }
 }
-
-
